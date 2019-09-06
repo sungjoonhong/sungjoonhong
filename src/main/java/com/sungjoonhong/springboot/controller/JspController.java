@@ -15,12 +15,15 @@ public class JspController {
     public String jsp() throws Exception {
         return "main";
     }
-    
+
+    //mapping abcd.jsp
     @RequestMapping("/abcd")
     public String abcd() throws Exception {
         return "abcd";
     }
     
+    
+    //ResponseBody shows return data
     @RequestMapping("/abcd2")
     public @ResponseBody String abcd2() throws Exception {
         return "abcd2";
