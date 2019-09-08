@@ -3,9 +3,9 @@
     PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
     "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
     
-<mapper namespace="com.sungjoonhong.springboot.mapper.MemberMapper">
+<mapper namespace="com.sungjoonhong.springboot.dao.MemberMapper">
         
-    <select id="selectMemberList" resultType="com.sungjoonhong.springboot.dto.Member">
+    <select id="selectMemberList" resultType="com.sungjoonhong.springboot.domain.MemberVO">
         select * from sungjoonhong.member
     </select>
     
