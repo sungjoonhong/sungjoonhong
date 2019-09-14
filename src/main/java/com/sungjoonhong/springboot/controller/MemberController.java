@@ -16,10 +16,13 @@ public class MemberController {
 	@Autowired
 	MemberService memberService;
 
-	@RequestMapping("/member")
+	@RequestMapping("/selectMember")
 	public ModelAndView query() throws Exception {
 		List<MemberVO> memberList = memberService.selectMemberList();
-		ModelAndView member = new ModelAndView("member");
+
+		//JSP name
+		ModelAndView member = new ModelAndView("selectMember");
+		
 		member.addObject("memberList", memberList);
 		return member;
 	}
