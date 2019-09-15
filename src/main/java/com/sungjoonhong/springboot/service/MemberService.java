@@ -14,12 +14,16 @@ public class MemberService {
 	@Autowired
 	MemberMapper memberMapper;
 
-	public List<MemberVO> selectMemberList() throws Exception {
-		return memberMapper.selectMemberList();
+	public List<MemberVO> selectMember() throws Exception {
+		return memberMapper.selectMember();
 	}
 	
 	public List<MemberVO> selectMemberList2() throws Exception {
-		return memberMapper.selectMemberList();
+		return memberMapper.selectMemberList2();
+	}
+	
+	public void insertMember(MemberVO member) throws Exception {
+		memberMapper.insertMember(member);
 	}
 
 }

@@ -5,8 +5,12 @@
     
 <mapper namespace="com.sungjoonhong.springboot.dao.MemberMapper">
         
-    <select id="selectMemberList" resultType="com.sungjoonhong.springboot.domain.MemberVO">
+    <select id="selectMember" resultType="com.sungjoonhong.springboot.domain.MemberVO">
         select * from sungjoonhong.member
     </select>
+    
+    <insert id="insertMember">
+        insert into sungjoonhong.member(NAME) VALUES(#{name})
+    </insert>
     
 </mapper>

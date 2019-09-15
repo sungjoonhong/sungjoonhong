@@ -8,11 +8,15 @@
 <title>Insert title here</title>
 </head>
 <body>
-
-	<c:forEach var="member" items="${memberList}">
-		${member.id}
-		${member.name}
-	</c:forEach>
+	<ul>
+		<c:forEach var="member" items="${memberList}">
+			<li>${member.id}</li>
+			<li>${member.name}</li>
+		</c:forEach>
+	</ul>
+	<form method="post" action="insertMember">
+		name = <input type="text" name="name"> <input type="submit">
+	</form>
 
 </body>
 </html>
