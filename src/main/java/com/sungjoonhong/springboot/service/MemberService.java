@@ -18,12 +18,16 @@ public class MemberService {
 		return memberMapper.selectMember();
 	}
 	
-	public List<MemberVO> selectMemberList2() throws Exception {
-		return memberMapper.selectMemberList2();
+	public List<MemberVO> selectMember2() throws Exception {
+		return memberMapper.selectMember2();
 	}
 	
 	public void insertMember(MemberVO member) throws Exception {
 		memberMapper.insertMember(member);
+	}
+	
+	public void insertMember2(MemberVO member) throws Exception {
+		memberMapper.insertMember2(member);
 	}
 
 }

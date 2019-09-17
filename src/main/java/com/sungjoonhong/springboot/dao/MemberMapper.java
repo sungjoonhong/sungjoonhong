@@ -2,6 +2,7 @@ package com.sungjoonhong.springboot.dao;
 
 import java.util.List;
 
+import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 
@@ -13,9 +14,11 @@ public interface MemberMapper {
 	public List<MemberVO> selectMember() throws Exception;
 	
 	@Select("SELECT * FROM sungjoonhong.member")
-	public List<MemberVO> selectMemberList2() throws Exception;
+	public List<MemberVO> selectMember2() throws Exception;
 	
-//	@Insert("INSERT INTO sungjoonhong.member(NAME) VALUES('TEST')")
 	public void insertMember(MemberVO member) throws Exception;
+	
+	@Insert("INSERT INTO sungjoonhong.member(name) VALUES(#{name})")
+	public void insertMember2(MemberVO member) throws Exception;
 
 }

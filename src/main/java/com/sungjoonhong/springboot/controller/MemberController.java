@@ -36,7 +36,8 @@ public class MemberController {
 	//change controller
 	@RequestMapping("/selectMember")
 	public String selectMember(Model model) throws Exception {
-		List<MemberVO> memberList = memberService.selectMember();
+		//selectMember2 use mybatis annotation
+		List<MemberVO> memberList = memberService.selectMember2();
 
 		//JSP name
 //		ModelAndView member = new ModelAndView("selectMember");
@@ -48,7 +49,8 @@ public class MemberController {
 	@RequestMapping("/insertMember")
 	public String insertMember(MemberVO member) throws Exception {
 		logger.info("member = " + member.toString());
-		memberService.insertMember(member);
+		//insertMember2 use mybatis annotation
+		memberService.insertMember2(member);
 		return "redirect:selectMember";
 	}
 
