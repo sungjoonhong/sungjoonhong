@@ -37,4 +37,19 @@ public class BoardController {
 		boardService.insertBoard(board);
 		return "redirect:selectBoard";
 	}
+	
+	@RequestMapping("/formBoard")
+	public String formBoard(BoardVO board) throws Exception {
+		return "formBoard";
+	}
+	
+	@RequestMapping("/readBoard")
+	public String readBoard(Model model, BoardVO board) throws Exception {
+		logger.info("board = " + board.toString());
+		logger.info("boardService = " + boardService.readBoard(board));
+
+		model.addAttribute("readBoard", boardService.readBoard(board));
+		return "readBoard";
+	}
+	
 }

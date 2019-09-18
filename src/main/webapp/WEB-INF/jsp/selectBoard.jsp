@@ -10,13 +10,10 @@
 <body>
 	<ul>
 		<c:forEach var="boardList" items="${boardList}">
-			<li>${boardList.bno}</li>
-			<li>${boardList.contents}</li>
+			<li>${boardList.bno} | <a href="readBoard?bno=${boardList.bno}">${boardList.title}</a> | ${boardList.writer}</li>
 		</c:forEach>
 	</ul>
-	<form method="post" action="insertBoard">
-		contents = <input type="textarea" name="contents"> <input type="submit">
-	</form>
+	<a href="formBoard">write</a>
 
 </body>
 </html>

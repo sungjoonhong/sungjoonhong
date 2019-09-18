@@ -18,8 +18,12 @@ public class BoardService {
 		return boardDao.selectBoard();
 	}
 	
-	public void insertBoard(BoardVO member) throws Exception {
-		boardDao.insertBoard(member);
+	public void insertBoard(BoardVO board) throws Exception {
+		boardDao.insertBoard(board);
+	}
+	
+	public BoardVO readBoard(BoardVO board) throws Exception {
+		return boardDao.readBoard(board);
 	}
 
 }

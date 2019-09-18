@@ -14,6 +14,9 @@ public interface BoardDAO {
 	@Select("SELECT * FROM sungjoonhong.board")
 	public List<BoardVO> selectBoard() throws Exception;
 
-	@Insert("INSERT INTO sungjoonhong.board(contents) VALUES(#{contents})")
-	public void insertBoard(BoardVO member) throws Exception;
+	@Insert("INSERT INTO sungjoonhong.board(title, writer, contents) VALUES(#{title}, #{writer}, #{contents})")
+	public void insertBoard(BoardVO board) throws Exception;
+	
+	@Select("SELECT * FROM sungjoonhong.board where bno=#{bno}")
+	public BoardVO readBoard(BoardVO board) throws Exception;
 }
