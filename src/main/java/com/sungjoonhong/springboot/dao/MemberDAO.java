@@ -9,7 +9,7 @@ import org.apache.ibatis.annotations.Select;
 import com.sungjoonhong.springboot.domain.MemberVO;
 
 @Mapper
-public interface MemberMapper {
+public interface MemberDAO {
 	
 	public List<MemberVO> selectMember() throws Exception;
 	
