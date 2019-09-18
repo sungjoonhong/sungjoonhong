@@ -9,9 +9,9 @@
 </head>
 <body>
 	<ul>
-		<c:forEach var="member" items="${memberList}">
-			<li>${member.id}</li>
-			<li>${member.name}</li>
+		<c:forEach var="memberList" items="${memberList}">
+			<li>${memberList.id}</li>
+			<li>${memberList.name}</li>
 		</c:forEach>
 	</ul>
 	<form method="post" action="insertMember">
