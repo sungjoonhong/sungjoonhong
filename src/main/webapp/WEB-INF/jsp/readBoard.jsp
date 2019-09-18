@@ -12,5 +12,6 @@ ${readBoard.writer}
 ${readBoard.title}
 ${readBoard.contents}
 
+<a href="selectBoard">go to list</a>
 </body>
 </html>
